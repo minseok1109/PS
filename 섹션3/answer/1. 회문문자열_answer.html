@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(s){
+                let answer = "YES";
+                let lowerS = s.toLowerCase();
+                let lowerReverseS = [...lowerS].reverse().join("");
+                lowerS === lowerReverseS ? answer : answer = "NO";
+                return answer
+            }
+            
+            let str="sooos";
+            console.log(solution(str));
+        </script>
+    </body>
+</html>
+
+
+
+

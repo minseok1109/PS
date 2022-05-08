@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(n, arr) {
+        let answer = arr[0];
+        let sumAll = arr.map((ele) => {
+          return [...String(ele)].reduce(
+            (acc, curr) => Number(acc) + Number(curr),
+            0
+          );
+        });
+
+        for (let i in sumAll) {
+          let max = sumAll[0];
+          if (max < sumAll[i]) {
+            max = sumAll[i];
+            answer = arr[i];
+          } else if (max === sumAll[i]) {
+            if (arr[sumAll.indexOf(max)] < arr[i]) {
+              answer = arr[i];
+            }
+          }
+        }
+        return answer;
+      }
+
+      let arr = [1280, 460, 603, 40, 521, 1370, 123];
+      console.log(solution(7, arr));
+    </script>
+  </body>
+</html>
