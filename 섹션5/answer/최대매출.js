@@ -24,6 +24,7 @@ function solution(k, arr) {
     sum += arr[i];
   }
   answer = sum;
+
   for (let i = k; i < arr.length; i++) {
     sum += arr[i] - arr[i - k];
     answer = Math.max(answer, sum);
