@@ -11,5 +11,4 @@ function solution(arr) {
   return arr;
 }
 
-let arr = [13, 5, 11, 7, 23, 15, 8, 4];
-console.log(solution(arr));
+module.exports = solution;
