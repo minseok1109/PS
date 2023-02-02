@@ -1,0 +1,27 @@
+{
+	"jest": {
+		"prefix": "ts",
+		"body": [
+			"const solution = require(\"$1\");",
+			"",
+			"describe(\"${TM_FILENAME_BASE}($2)\", () => {",
+			"  test(\"case 1\", () => {",
+			"    expect(solution($3)).toEqual($4);",
+			"  });",
+			"});",
+			""
+		],
+		"description": "jest"
+	},
+	"solution": {
+		"prefix": "sol",
+		"body": [
+			"function solution($1) {",
+			"  let answer = 0;",
+			"}",
+			"",
+			"module.exports = solution;"
+		],
+		"description": "jest"
+	}
+}
